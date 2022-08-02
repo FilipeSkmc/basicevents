@@ -1,0 +1,29 @@
+<template>
+	<lightning-card>
+		<div class="slds-m-around_medium">
+			<h1 class="slds-text-heading_large">Chega na morena e diz: "Eu Manjo de LWC"</h1>
+
+			<div class="content" if:true={visible}>
+				<div>Nome: {nome}</div>
+				<div>Idade: {idade} anos</div>
+				<div>Cpf: {cpf}</div>
+				<div>Email: {email}</div>
+
+				<lightning-input type="checkbox" label="Mostrar Gato" name="gato" onchange={handleChange}></lightning-input>
+			</div>
+
+			<div class="content" if:false={visible}>
+				<h2>Chamando um Component Lightning</h2>
+				<c-component></c-component>
+			</div>
+
+
+			<lightning-button variant="brand" label="Clique Aqui" title="Primary action" onclick={handleClick}
+				class="slds-m-left_x-small"></lightning-button>
+
+		</div>
+
+	</lightning-card>
+
+
+</template>
